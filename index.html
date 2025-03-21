@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Area</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+    <div class="contact">
+        <h1>Let's calculate the area of a rectangle</h1>
+    </div>
+    <img src="https://images.twinkl.co.uk/tr/raw/upload/u/ux/twinkl33_ver_1.png">
+    <div class="row">
+    <div>
+        <label for="a">Base</label>
+        <input type="text" id="a" name="a" style="width:100px;">
+    </div>
+    <div>
+        <label for="b">height</label>
+        <input type="text" id="b" name="b" style="width:100px;">
+    </div>
+    </div>
+    <button id="calc">Calculate</button>
+    <button id="clear">Clear</button>
+    <p></p>
+    <script>
+        const a=document.getElementById('a');
+        const b=document.getElementById('b');
+        const ans=document.querySelector('p')
+        const calculateButton=document.getElementById('calc');
+        const clearButton=document.getElementById('clear');
 
+        calculateButton.addEventListener('click', function(e){
+            let first = a.value;
+            let second = b.value;
+            let sum = first * second;
+
+            ans.textContent="the area of both numbers are " + sum + "."
+        })
+
+        clearButton.addEventListener('click', function(e){
+            a.value="";
+            b.value="";
+            ans.textContent="";
+        })
+
+
+    </script>
+</div>
 </body>
 </html>

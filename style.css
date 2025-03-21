@@ -55,4 +55,5 @@ section header{
 .row {
     display: flex;
     gap: 16px;
+    align-content: center;
 }
